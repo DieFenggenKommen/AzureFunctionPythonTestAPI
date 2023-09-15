@@ -1,0 +1,34 @@
+@url = https://paastest111.azurewebsites.net
+#@url = http://20.250.36.167
+
+### Get all students
+
+GET {{url}}/students
+
+
+### Get student by id 
+
+GET {{url}}/students/1
+
+### Create student
+POST {{url}}/students
+content-type: application/json
+
+{
+    "id": 3,
+    "course": "Computer Science",
+    "name": "Fritz"
+}
+
+### Update student
+PUT {{url}}/students/1
+content-type: application/json
+
+{
+    "id": 1,
+    "course": "Computer Science",
+    "name": "John"
+}
+
+### Delete student
+DELETE {{url}}/students/3
